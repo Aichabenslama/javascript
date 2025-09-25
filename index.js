@@ -112,3 +112,117 @@ function checkSeason(month) {
   }
 }
 console.log(checkSeason("OCtober"));
+
+// LEVEL 2
+// 1- linear equation
+function solveLinEqua(a,b,c,x,y){
+  return a*x+b*y+c;
+}
+console.log(solveLinEqua(2,3,1,2,4));
+// 3-print array
+// function printArray (array){
+//   for (let i=0;i<array.lenght;i++){
+//     console.log(array[i]);
+//   }
+// }
+// printArray([1]);
+// 4- date time
+function showDateTime(day,month,year,hour,munite){
+  return `${day}/${month}/${year} ${hour}:${munite}`;
+  
+}
+console.log(showDateTime(23,2,2004,5,22));
+// 5-swapValue
+function swapValue(x,y){
+  let aux=x;
+  x=y;
+  y=aux;
+  return `x=${x},y=${y}`
+}
+console.log(swapValue(2,4));
+//6-
+
+function reverseArray(array) {
+    const reverse = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        reverse[reverse.length] = array[i]; 
+    }
+    return reverse;
+}
+const arr =[1,2,3,4];
+console.log(reverseArray(arr));
+//8-
+function additem(item){
+  let array=[];
+  array.push(item);
+  return array;
+}
+console.log(additem("tunis"));
+console.log(additem("italie"));
+//9-
+function removeItem(index){
+  const array=[1,2,3,4]
+  for (let i=0; i<array.length;i++){
+    if (i==index) {
+      array[index]=array[i+1]
+      array.splice(index,1);
+      
+    }
+  }
+  return array;
+
+}
+console.log(removeItem(2));
+//10-
+function sumOfNumbers(number){
+  let sum =0;
+  for (let i = 0; i <=number; i++) {
+    sum=sum+i;
+    
+    
+  }
+  return sum;
+}
+console.log(sumOfNumbers(5));
+//11-
+function sumOfOdds(number){
+  let sum=0;
+  for (let i = 0; i <=number; i++) {
+    if (i%2!=0) {
+      sum =sum+i;
+      
+    }
+    
+  }return sum;
+}
+console.log(sumOfOdds(12));
+//12-
+function sumOfEven(number){
+  let sum=0;
+  for (let i = 0; i <=number; i++) {
+    if (i%2==0) {
+      sum =sum+i;
+      
+    }
+    
+  }return sum;
+}
+console.log(sumOfEven(12));
+//13-
+function evensAndOdds(number){
+  let odds=0;
+  let evens=0;
+  for (let i = 0; i < number; i++) {
+    
+    if (i%2===0) {
+      evens++;
+      
+    } else {
+      odds++;
+    }
+    
+  }
+  console.log(`The number of odds are ${odds}.`);
+  console.log(`The number of evens are ${evens}.`);
+}
+evensAndOdds(100);
