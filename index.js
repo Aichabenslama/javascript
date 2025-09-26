@@ -226,3 +226,30 @@ function evensAndOdds(number){
   console.log(`The number of evens are ${evens}.`);
 }
 evensAndOdds(100);
+//LEVEL3
+//12-
+function sumOfArrayItems(array){
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') {
+      return `Array are non-number types`;
+    }
+  }
+  let sum = 0;
+  for (let num of arr) {
+    sum =sum+num;
+  }
+  return sum;
+}
+const array=[1,2,3,4];
+console.log(sumOfArrayItems(array));
+//14
+function modifyArray(array) {
+  if (array.length < 5) {
+    return 'Items Not Found';
+  }
+
+  array[4] = array[4].toUpperCase();
+  return array;
+  
+}
+console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']));
